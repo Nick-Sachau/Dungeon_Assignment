@@ -27,6 +27,12 @@ namespace DungeonLibrary
             return MaxExperience + 30;
         }
 
+        public override int CalcDamage()
+        {
+            //find random number between min and max damage on weapon
+            return 0;
+        }
+
         public override string ToString()
         {
             return $"{base.ToString()}\n" +
