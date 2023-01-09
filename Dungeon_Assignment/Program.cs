@@ -1,6 +1,4 @@
 ﻿using DungeonLibrary;
-using System.Diagnostics;
-using System.Numerics;
 
 namespace Dungeon_Assignment
 {
@@ -10,6 +8,8 @@ namespace Dungeon_Assignment
         {
             #region Title / Introduction
             Console.Title = "DUNGEON OF DOOM!";
+            Console.WriteLine("What is your name:");
+            string name = Console.ReadLine();
             Console.WriteLine("Your journey begins...\n");
             #endregion
 
@@ -18,10 +18,10 @@ namespace Dungeon_Assignment
             int score = 0;
 
             //TODO Create a weapon object
-            Weapon w1 = new Weapon(1, 8, "long sword", 10, true, WeaponType.Sword);
+            Weapon w1 = new Weapon(8, 15, "long sword", 20, true, WeaponType.Sword);
 
             //TODO Create a player
-            Player player = new Player("Jeremy Huber", 70, 5, 40, 40, w1);
+            Player player = new Player(name, 70, 15, 40, 40, w1);
             #endregion
 
 
@@ -112,7 +112,7 @@ namespace Dungeon_Assignment
                     #endregion
 
                     //TODO Check player life
-                    if (player.Life == 0)
+                    if (player.Life <= 0)
                     {
                         Console.WriteLine("You died\a");
                         quit = true;
@@ -151,5 +151,4 @@ namespace Dungeon_Assignment
         }
         #endregion
     }
-}
 }
