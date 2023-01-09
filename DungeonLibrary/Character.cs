@@ -38,6 +38,7 @@
         public virtual int CalcBlock()
         {
             int block = 0; //TODO change to do calculations
+            
             return block;
         }
 
@@ -47,10 +48,7 @@
             return HitChance;
         }
 
-        public int CalcDamage()
-        {
-            return 0;
-        }
+        public abstract int CalcDamage();
 
         public override string ToString()
         {
